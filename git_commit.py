@@ -8,10 +8,11 @@ f.close()
 x = int(x)+1
 os.system("git add .")
 os.system("git commit -m \"Commit no. "+str(x)+"\"")
-os.system("git push origin master")
 keyboard.type("shubhamamsa")
+os.system("git push origin master")
+
 keyboard.press("Key.enter")
-keyboard.release("Key.enter")
+keyboard.release("Key.return")
 f = open("commit_no.txt", "w")
 f.write(str(x))
 f.close()
