@@ -32,10 +32,9 @@ void subMain()	{
 	for(int i=0;i<n;i++)
 		cin >> y[i];
 	sort(x, x+n);
-	if(n == 1)	{
-		cout << 1;
-		return;
-	}
+	for(int i=0;i<n;i++)
+		cout << x[i] << " ";
+	cout << endl;
 	pair<int, int>pair1;
 	pair1 = findpair(x, 0, n-1, k);
 	int sum = pair1.second-pair1.first+1;
@@ -53,7 +52,7 @@ void subMain()	{
 		pair3 = findpair(x, pair1.second+1, n-1, k);
 		sum+=max(pair2.second-pair2.first+1, pair3.second-pair3.first+1);
 	}
-	cout << sum;
+	cout << min(n, sum);
 }	
 
 int main()	{
